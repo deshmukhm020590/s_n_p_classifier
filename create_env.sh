@@ -8,3 +8,5 @@
     --file "model_files/notebooks/config/environment.yml"
 
   echo "Done. Activate with: conda activate ./env"
+
+  source "/c/ProgramData/anaconda3/etc/profile.d/conda.sh" && conda activate "./env"' > activate_env.sh
