@@ -1,0 +1,56 @@
+# ============================================================
+# environment.yml
+# Binary Classification - ML Project (No Deep Learning)
+# Excludes: Data Acquisition & Experiment Tracking libraries
+# Python Version: 3.11
+# ============================================================
+
+name: ml_classification_env
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+
+  # --- Core Data Handling ---
+  - numpy
+  - pandas
+  - scipy
+
+  # --- Data Visualisation ---
+  - matplotlib
+  - seaborn
+  - plotly
+
+  # --- Machine Learning (Scikit-learn ecosystem) ---
+  - scikit-learn
+  - xgboost
+  - lightgbm
+  - imbalanced-learn       # SMOTE / class imbalance handling
+
+  # --- Model Evaluation & Explainability ---
+  - shap                   # Feature importance & model explainability
+
+  # --- Hyperparameter Tuning ---
+  - optuna                 # Bayesian hyperparameter optimisation
+
+  # --- Notebook & Development Environment ---
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+  - tqdm                   # Progress bars
+
+  # --- Utilities ---
+  - joblib                 # Model serialisation / parallelism
+  - pyarrow                # Efficient parquet read/write
+
+  # --- Pip-only libraries (not available via conda-forge) ---
+  - pip
+  - pip:
+    - catboost
+    - eli5                 # Permutation importance, model inspection
+    - scikit-optimize      # Bayesian search (skopt)
+    - ta                   # RSI, MACD, Bollinger Bands, EMA, SMA etc.
+    - pandas-ta            # Extended technical analysis indicators
