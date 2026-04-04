@@ -53,4 +53,4 @@ dependencies:
     - eli5                 # Permutation importance, model inspection
     - scikit-optimize      # Bayesian search (skopt)
     - ta                   # RSI, MACD, Bollinger Bands, EMA, SMA etc.
-    - pandas-ta            # Extended technical analysis indicators
+    # pandas-ta removed — incompatible with Python 3.11+; use `ta` instead

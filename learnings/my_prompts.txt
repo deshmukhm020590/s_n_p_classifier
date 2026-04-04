@@ -1,0 +1,36 @@
+Prompts Log
+===========
+
+1. tell me the bash script to create conda environment using the YAML file from @config folder into the @env folder
+
+2. tweak the current notebook code to add a line saying env was created properly if the above import statement get executed properly
+
+3. Read the csv dataset from @input folder in transform notebook
+
+4. Write code to perform data cleaning on the overall dataset df using standard data cleaning practices. Insert the code into a new cell of the transform notebook
+
+5. Write a code in a new cell to filter the dataset for top 5 stocks with maximum number of records. I do not want a datasets with records size higher than 25K. If the top 5 stocks records count is higher than 25k, 
+i want you to create a filtered dataset with top 4 stocks. But make sure you have all the records for a stock picked from the orginal dataset df.
+
+6. Tweak the code of # ── Filter: Top N Stocks by Record Count (max 25K total) for top 10 stocks instead of top 5 in the same cell.
+
+7. Add code in a new cell to generate the output label which is a boolean high/low (i.e. 1/0) for each row based on if the closing price of the stock is higher or lower than previous day's closing price.
+
+8. write a code to show the output label distribution in percentage for each ticker. display the top 5 rows of the dataset.
+
+9. Can you add code across different cells of analysis.ipynb notebook to read the filtered_stocks.csv file from the @output folder and perform standard EDA techniques like - 
+descriptive statistics, univariate & bivariate analysis, correlation plots, etc. Save the output dataset and plots in the @output folder. I need to EDA done with a pretext of further developing a binary classification model 
+with "target" column as the output label
+
+10. Write scripts across different cells of the 03_feature_engineer notebook to -
+    1. Read the eda_stocks.csv dataset into a python pandas dataframe
+    2. Using ta python library create derived KPIs - SMA(20, 50); EMA (12, 26); MACD Line + Signal + Histogram, RSI (14); Bollinger Upper, Middle, Lower + %B; using the base OHLCV columns from the dataset. Add the new columns to the existing dataset
+    3. Create 2 new dataframes: X(features) and y(response) by column-splitting the updated pandas dataframe
+    4. Split the X and y datasets further using 70-30 or 80-20 (train-test) split. This is not a very stringent rule since the data under scrutiny is temporal data. Ideally, data in train should cover dates from entire year and for test also entire year.
+       DO NOT KEEP few DATES FROM AN YEAR in TRAIN and REST in TEST datasets. For stock data, always do a chronological split. Earlier dates → train | Later dates → test. Name these datasets as per industry standard conventions
+    5. Perform min-max scaling on features in train dataset and fit it to features in test dataset
+    6. I don't think we need a label encoder for the response datasets i.e. y_train and y_test. But, apply label encoder if you feel otherwise.
+
+11. Is the ta library not part of the env environment? I see it in yaml file but i am getting no module found while importing it.
+
+12. Add the latest missing prompts from the CLAUDE terminal chat to the my_prompts.txt file
