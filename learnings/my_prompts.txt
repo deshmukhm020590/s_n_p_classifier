@@ -34,3 +34,9 @@ with "target" column as the output label
 11. Is the ta library not part of the env environment? I see it in yaml file but i am getting no module found while importing it.
 
 12. Add the latest missing prompts from the CLAUDE terminal chat to the my_prompts.txt file
+
+13. generate the code across different cells of the 04_model_predict.ipynb notebook using instructions from the model_instructions.txt file from @model_files/input folder
+
+14. why am i not able to run the first cell of the 04_model_predict.ipynb notebook?
+
+15. added the missing prompts from the terminal history into my_prompts.txt file within the @learnings\ folder
