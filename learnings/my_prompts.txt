@@ -9,7 +9,7 @@ Prompts Log
 
 4. Write code to perform data cleaning on the overall dataset df using standard data cleaning practices. Insert the code into a new cell of the transform notebook
 
-5. Write a code in a new cell to filter the dataset for top 5 stocks with maximum number of records. I do not want a datasets with records size higher than 25K. If the top 5 stocks records count is higher 
+5. Write a code in a new cell to filter the dataset for top 5 stocks with maximum number of records. I do not want a datasets with records size higher than 25K. If the top 5 stocks records count is higher
 than 25k, i want you to create a filtered dataset with top 4 stocks. But make sure you have all the records for a stock picked from the orginal dataset df.
 
 6. Tweak the code of # ── Filter: Top N Stocks by Record Count (max 25K total) for top 10 stocks instead of top 5 in the same cell.
@@ -18,17 +18,17 @@ than 25k, i want you to create a filtered dataset with top 4 stocks. But make su
 
 8. write a code to show the output label distribution in percentage for each ticker. display the top 5 rows of the dataset.
 
-9. Can you add code across different cells of analysis.ipynb notebook to read the filtered_stocks.csv file from the @output folder and perform standard EDA techniques like - 
-descriptive statistics, univariate & bivariate analysis, correlation plots, etc. Save the output dataset and plots in the @output folder. I need to EDA done with a pretext of further developing a binary 
+9. Can you add code across different cells of analysis.ipynb notebook to read the filtered_stocks.csv file from the @output folder and perform standard EDA techniques like -
+descriptive statistics, univariate & bivariate analysis, correlation plots, etc. Save the output dataset and plots in the @output folder. I need to EDA done with a pretext of further developing a binary
 classification model with "target" column as the output label
 
 10. Write scripts across different cells of the 03_feature_engineer notebook to -
     1. Read the eda_stocks.csv dataset into a python pandas dataframe
-    2. Using ta python library create derived KPIs - SMA(20, 50); EMA (12, 26); MACD Line + Signal + Histogram, RSI (14); Bollinger Upper, Middle, Lower + %B; using the base OHLCV columns from the dataset. 
+    2. Using ta python library create derived KPIs - SMA(20, 50); EMA (12, 26); MACD Line + Signal + Histogram, RSI (14); Bollinger Upper, Middle, Lower + %B; using the base OHLCV columns from the dataset.
     Add the new columns to the existing dataset
     3. Create 2 new dataframes: X(features) and y(response) by column-splitting the updated pandas dataframe
-    4. Split the X and y datasets further using 70-30 or 80-20 (train-test) split. This is not a very stringent rule since the data under scrutiny is temporal data. Ideally, data in train should cover dates 
-    from entire year and for test also entire year. DO NOT KEEP few DATES FROM AN YEAR in TRAIN and REST in TEST datasets. For stock data, always do a chronological split. 
+    4. Split the X and y datasets further using 70-30 or 80-20 (train-test) split. This is not a very stringent rule since the data under scrutiny is temporal data. Ideally, data in train should cover dates
+    from entire year and for test also entire year. DO NOT KEEP few DATES FROM AN YEAR in TRAIN and REST in TEST datasets. For stock data, always do a chronological split.
     Earlier dates → train | Later dates → test. Name these datasets as per industry standard conventions
     5. Perform min-max scaling on features in train dataset and fit it to features in test dataset
     6. I don't think we need a label encoder for the response datasets i.e. y_train and y_test. But, apply label encoder if you feel otherwise.
@@ -43,15 +43,15 @@ classification model with "target" column as the output label
 
 15. added the missing prompts from the terminal history into my_prompts.txt file within the @learnings\ folder
 
-16. generate the code for training SVM model further into the notebook 04_model_predict.ipynb across multiple cells. Use instructions from the model_instructions.txt file from @model_files/input folder. 
+16. generate the code for training SVM model further into the notebook 04_model_predict.ipynb across multiple cells. Use instructions from the model_instructions.txt file from @model_files/input folder.
 Skip the instructions from STEP 1 — BASELINE: LOGISTIC REGRESSION section while generating the code for SVM model.
 
-17. generate the code for training Decision Tree and random forrest models (based binary classification) further into the notebook 04_model_predict.ipynb across multiple cells. 
-Use instructions from the model_instructions.txt file from @model_files/input folder. Skip the instructions from STEP 1 — BASELINE: LOGISTIC REGRESSION and STEP 2 — SUPPORT VECTOR MACHINE (SVM) sections 
+17. generate the code for training Decision Tree and random forrest models (based binary classification) further into the notebook 04_model_predict.ipynb across multiple cells.
+Use instructions from the model_instructions.txt file from @model_files/input folder. Skip the instructions from STEP 1 — BASELINE: LOGISTIC REGRESSION and STEP 2 — SUPPORT VECTOR MACHINE (SVM) sections
 while reading context for generating the code for Decision Trees and Random Forrest models.
 
-18. generate the code for training boosting models (AdaBoost, XGBoost and GBM) based binary classification further into the notebook 04_model_predict.ipynb across multiple cells. 
-Use instructions from the model_instructions.txt file from @model_files/input folder. Skip the instructions from STEP 1 — BASELINE: LOGISTIC REGRESSION, STEP 2 — SUPPORT VECTOR MACHINE (SVM), 
+18. generate the code for training boosting models (AdaBoost, XGBoost and GBM) based binary classification further into the notebook 04_model_predict.ipynb across multiple cells.
+Use instructions from the model_instructions.txt file from @model_files/input folder. Skip the instructions from STEP 1 — BASELINE: LOGISTIC REGRESSION, STEP 2 — SUPPORT VECTOR MACHINE (SVM),
 STEP 3 — DECISION TREE and STEP 4 — RANDOM FOREST sections while reading context for generating the code on boosting models.
 
 19. Can you check why did the code errored out in the tuning of AdaBoost model ?
@@ -66,7 +66,7 @@ STEP 3 — DECISION TREE and STEP 4 — RANDOM FOREST sections while reading con
 
 24. pls add the missing prompt from the conversation history into the my_prompts.txt file stored inside @learnings\ folder
 
-25. use instructions: STEP 10 — FEATURE IMPORTANCE; STEP 11 — OVERFITTING CHECK AND STEP 12 — SAVE BEST MODEL from the model_instructions.txt file located in the @model_files/input folder and generate 
+25. use instructions: STEP 10 — FEATURE IMPORTANCE; STEP 11 — OVERFITTING CHECK AND STEP 12 — SAVE BEST MODEL from the model_instructions.txt file located in the @model_files/input folder and generate
 the necessary code in 05_model_evaluation.ipynb notebook. Refer 04_model_predict.ipynb for more context on the trained predictive models.
 
 26. install the nbconvert library into the project's virtual environment
@@ -79,12 +79,18 @@ the necessary code in 05_model_evaluation.ipynb notebook. Refer 04_model_predict
 
 30. git checkout -b feature/consolidate
 
-31. Review all the codebase across all notebooks from the @model_files/notebooks/src folder and create a consolidate_instructions.txt file to merge all the logic related to stock price prediction model 
-spread across notebooks. My aim is to use this consolidate_instructions.txt file for generating the final IPython notebook 06_final.ipynb that will contain all the logic around - raw data transformation, 
+31. Review all the codebase across all notebooks from the @model_files/notebooks/src folder and create a consolidate_instructions.txt file to merge all the logic related to stock price prediction model
+spread across notebooks. My aim is to use this consolidate_instructions.txt file for generating the final IPython notebook 06_final.ipynb that will contain all the logic around - raw data transformation,
 exploratory data analysis, feature engineering, model_prediction and model evaluation. Make sure to identify the irrelevant bits across the notebooks and leave them while writing the consolidate_instructions.txt file.
 The file should mention that we do not write any plots/charts into the output folder. The code in the 06_final.ipynb should print the results and create the plots. But do save/store these in the output folders.
 The consolidate_instructions.txt file should mention this point explicitly.
 
 32. Generate code in 06_final.ipynb notebook based on instructions captured in the consolidate_instructions.txt file located @model_files/input folder.
 
+33. pls add the missing prompt from the conversation history into the my_prompts.txt file stored inside @learnings\ folder
 
+34. git commit -m "30th: Added consolidate feature"
+
+35. pls add the missing prompt from the conversation history into the my_prompts.txt file stored inside @learnings\ folder
+
+36. Appropriately order the numbering of the prompts in my_prompts.txt. The numbering is not correct.
