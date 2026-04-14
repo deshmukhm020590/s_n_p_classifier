@@ -64,3 +64,27 @@ STEP 3 — DECISION TREE and STEP 4 — RANDOM FOREST sections while reading con
 
 23. Resolve the error in the 05_model_evaluation.ipynb notebook. The cell performing BASELINE vs TUNED -- METRIC DELTA TABLE is throwing the error. resolve it
 
+24. pls add the missing prompt from the conversation history into the my_prompts.txt file stored inside @learnings\ folder
+
+25. use instructions: STEP 10 — FEATURE IMPORTANCE; STEP 11 — OVERFITTING CHECK AND STEP 12 — SAVE BEST MODEL from the model_instructions.txt file located in the @model_files/input folder and generate 
+the necessary code in 05_model_evaluation.ipynb notebook. Refer 04_model_predict.ipynb for more context on the trained predictive models.
+
+26. install the nbconvert library into the project's virtual environment
+
+27. Clear outputs + metadata from ALL notebooks in the project (in-place)
+
+28. add .ipynb_checkpoints to the .gitignore folder
+
+29. tell me the syntax of creating a new git branch in my repo
+
+30. git checkout -b feature/consolidate
+
+31. Review all the codebase across all notebooks from the @model_files/notebooks/src folder and create a consolidate_instructions.txt file to merge all the logic related to stock price prediction model 
+spread across notebooks. My aim is to use this consolidate_instructions.txt file for generating the final IPython notebook 06_final.ipynb that will contain all the logic around - raw data transformation, 
+exploratory data analysis, feature engineering, model_prediction and model evaluation. Make sure to identify the irrelevant bits across the notebooks and leave them while writing the consolidate_instructions.txt file.
+The file should mention that we do not write any plots/charts into the output folder. The code in the 06_final.ipynb should print the results and create the plots. But do save/store these in the output folders.
+The consolidate_instructions.txt file should mention this point explicitly.
+
+32. Generate code in 06_final.ipynb notebook based on instructions captured in the consolidate_instructions.txt file located @model_files/input folder.
+
+
