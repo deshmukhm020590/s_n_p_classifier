@@ -61,3 +61,6 @@ STEP 3 — DECISION TREE and STEP 4 — RANDOM FOREST sections while reading con
 21. where did you make the change in order to overcome the error ? Can you show me the pre and post versions?
 
 22. pls add the missing prompt from the conversation history into the my_prompts.txt file stored inside @learnings\ folder
+
+23. Resolve the error in the 05_model_evaluation.ipynb notebook. The cell performing BASELINE vs TUNED -- METRIC DELTA TABLE is throwing the error. resolve it
+
